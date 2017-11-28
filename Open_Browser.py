@@ -21,6 +21,8 @@ for line in file:
     line = line.rstrip('\n')
     data.append(line)
 file.close()
+username = data[0]
+password = data[1]
 # Sends the username and password to twitter and then clicks the login button
 driver.find_element_by_xpath('//*[@id="login-dialog-dialog"]/div[2]/div[2]/div[2]/form/div[1]/input').send_keys(username)
 driver.find_element_by_xpath('//*[@id="login-dialog-dialog"]/div[2]/div[2]/div[2]/form/div[2]/input').send_keys(password)
